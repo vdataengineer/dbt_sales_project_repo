@@ -1,9 +1,9 @@
 version: 2
+
 sources:
-  - name: src_sales
-    description: This is source .
+  - name: src_test
     database: SALES_DB
-    schema: raw
+    schema: RAW
     tables:
-      - name: cust           #  user define name for table
-        identifier: CUSTOMERS  # Actual table name
+      - name: CUST
+        identifier: CUSTOMERS

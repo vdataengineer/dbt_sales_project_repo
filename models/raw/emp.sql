@@ -1,0 +1,1 @@
+select * from  SALES_DB.raw.employee_details

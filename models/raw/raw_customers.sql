@@ -7,5 +7,6 @@ Phone,
 Address,
 countrycode,
 Updated_at
-FROM --SALES_DB.RAW.CUSTOMERS
---{{ source('src_sales', 'cust') }}
+FROM {{ source('src_test', 'CUST') }}
+
+ 
