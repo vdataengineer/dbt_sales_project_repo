@@ -1,12 +1,3 @@
-SELECT
-CustomerID,
-FirstName,
-LastName,
-Email,
-Phone,
-Address,
-countrycode,
-Updated_at
-FROM {{ source('src_test', 'CUST') }}
+select * from {{ source('src_test', 'CUST_raj') }}
 
  

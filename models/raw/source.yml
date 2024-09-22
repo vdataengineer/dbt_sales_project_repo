@@ -2,8 +2,10 @@ version: 2
 
 sources:
   - name: src_test
-    database: SALES_DB
+    database: ECOM_DB
     schema: RAW
     tables:
-      - name: CUST
+      - name: CUST_raj
         identifier: CUSTOMERS
+      - name: ORDERS
+      - name: ORDERITEMS      
