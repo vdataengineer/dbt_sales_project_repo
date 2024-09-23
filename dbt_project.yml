@@ -43,3 +43,6 @@ models:
     raw:
       +database: trg_db
       +schema: raw
+    staging:
+      +database: trg_db
+      +schema: stg    
