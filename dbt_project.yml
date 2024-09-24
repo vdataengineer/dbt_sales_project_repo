@@ -45,4 +45,9 @@ models:
       +schema: raw
     staging:
       +database: trg_db
-      +schema: stg    
+      +schema: stg 
+    presentation:
+      +database: trg_db
+      +schema: presentation
+      +materialized: table
+      +transient: false
