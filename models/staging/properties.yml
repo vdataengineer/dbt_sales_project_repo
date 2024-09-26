@@ -15,19 +15,12 @@ models:
       - name: countrycode
         data_tests:
           - accepted_values: 
-              values: ['US', 'UK','IND','JP','AUS',CA]
+              values: ['US', 'UK','IND','JP','AUS','CA']
       - name: countrycode
         data_tests:
           - relationships:
-              to: ref('country_code') # model name
-              field: country_code        
-  - name: orders_stg
-    description: staged order data from raw order table  
-    columns:
-      - name: OrderID
-        description: The primary key got orders_stg table
-        tests:
-          - unique
-          - not_null
-    
-        
+              to: ref('countrycode') # model name
+              field: country_code 
+
+
+   
