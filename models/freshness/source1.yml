@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: src
+    database: ECOM_DB
+    schema: RAW
+    tables:
+      - name: EMP_SRC
+        freshness:
+          warn_after: {count: 2, period: minute}
+          error_after: {count: 5, period: minute}
+        loaded_at_field: insert_ts
