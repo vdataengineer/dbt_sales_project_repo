@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: customers_stg
+    description: "customers_stg from customer raw table"
+    columns:
+      - name: CustomerID
+        data_tests:
+          - unique
+          - not_null
+      - name: LastName
+        description: "Last name is a required field"
+        data_tests:          
+          - not_null
+      - name: countrycode
+        data_tests:
+          - accepted_values: 
+              values: ['US', 'UK','IND','JP','AUS','CA']
+      - name: countrycode
+        data_tests:
+          - relationships:
+              to: ref('countrycode') # model name
+              field: country_code 
+
+
+   

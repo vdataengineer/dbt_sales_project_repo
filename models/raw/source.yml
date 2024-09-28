@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: src_test
+    description: "Getting data from snowflake ecom_db"
+    database: ECOM_DB
+    schema: RAW
+    tables:
+      - name: CUST_raj             # user define name for table
+        identifier: CUSTOMERS      # Actual table name
+      - name: ORDERS
+      - name: ORDERITEMS      
+models:
+  - name: raw_customer
+    description: "Raw customer data from snowflake ecom_db"
+    columns:
+      - name: CUSTOMERID
+        description: "customerid unique for each cusotmer"
+   

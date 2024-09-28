@@ -40,3 +40,14 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    raw:
+      +database: trg_db
+      +schema: raw
+    staging:
+      +database: trg_db
+      +schema: stg 
+    presentation:
+      +database: trg_db
+      +schema: presentation
+      +materialized: table
+      +transient: false
